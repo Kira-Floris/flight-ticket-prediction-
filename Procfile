@@ -1,1 +1,1 @@
-web:sh setup.sh && streamlit run dashboard.py --server.port:5500
+web:sh setup.sh && streamlit run dashboard.py
