@@ -301,7 +301,7 @@ def ai_function():
 with st.sidebar:
 	selected = option_menu(
 			menu_title = 'Menu',
-			options = ['Project Description','Analysis & Codes', 'AI', 'About Me']
+			options = ['Project Description','Analysis & Codes', 'AI']
 		)
 
 if selected == 'Project Description':
