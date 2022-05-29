@@ -1,1 +1,1 @@
-web: streamlit run --server.enableCORS false --server.port 5500 dashboard.py
+web:streamlit run --server.enableCORS false --server.port 5500 dashboard.py
