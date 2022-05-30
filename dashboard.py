@@ -2,6 +2,8 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
 import plotly.figure_factory as ff
+import seaborn as sns
+import matplotlib.pyplot as plt
 import plotly.express as px
 from PIL import Image
 import joblib
@@ -59,7 +61,6 @@ dataset.head(100)
 
 	# displaying data in relation to airlines
 	st.title('some data exploration on the data')
-
 
 	st.subheader('Airline relation to duration and price')
 	# dataset range slider
@@ -280,8 +281,8 @@ def ai_function():
 
 		    # predicting for the model
 		    prediction = model.predict([[labels['airline'],labels['flight'],labels['stops'],labels['class'],labels['duration']]])
-		    st.subheader('Predicted Price')
-		    st.subheader(int(prediction[0]))
+		    st.subheader('Predicted Price in Rs')
+		    st.subheader('Rs '+str(int(prediction[0])))
 
 
 
