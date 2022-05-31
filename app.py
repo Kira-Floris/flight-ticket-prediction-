@@ -48,10 +48,10 @@ def main():
 		st.code(
 				'''
 	dataset = pd.read_csv('./datasets/Clean_Dataset.csv')
-	dataset.head(100)
+	dataset
 				'''
 			)
-		st.dataframe(dataset.head(100))
+		st.dataframe(dataset)
 
 		# checking for null values in dataset
 		st.subheader('checking for null values in dataset')
@@ -121,9 +121,9 @@ def main():
 	dataset_copy['arrival_time'] = encoder.fit_transform(dataset_copy['arrival_time'])
 	dataset_copy['destination_city'] = encoder.fit_transform(dataset_copy['destination_city'])
 	dataset_copy['class'] = encoder.fit_transform(dataset_copy['class'])
-	dataset_copy.head(100)
+	dataset_copy
 			''')
-		st.dataframe(dataset_labeled.head(100))
+		st.dataframe(dataset_labeled)
 		st.text('after encoding them, we can them apply correlation to see which columns affect each other')
 		st.code('''
 	fig = (18,8)
@@ -138,9 +138,9 @@ def main():
 		st.subheader('Sample of Data about flights with selected features')
 		st.code('''
 	dataset_selected_features = dataset[['airline','flight','stops','class','duration','price']]
-	dataset_selected_features.head()
+	dataset_selected_features
 			''')
-		st.dataframe(dataset[['airline','flight','stops','class','duration','price']][:100])
+		st.dataframe(dataset[['airline','flight','stops','class','duration','price']][:])
 
 		# splitting into training and testing
 		st.subheader('splitting the data into training and testing')

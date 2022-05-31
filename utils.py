@@ -3,6 +3,11 @@ import pandas as pd
 def get_encoded_label(text, column, dataset_unlabeled:pd.DataFrame, dataset_labeled:pd.DataFrame):
 	obj = dict()
 	label = ''
+	if column == 'class':
+		if text=='Economy':
+			return 1
+		else:
+			return 0
 
 	# get unique values from unlabeled
 	unlabeled = list(set(dataset_unlabeled[column]))
